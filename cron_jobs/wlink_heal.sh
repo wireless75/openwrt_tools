@@ -41,6 +41,14 @@
 # 5) Reboot
 #	Just in case the router don't start cron properly
 #
+# Observations:
+#
+# - You can call also use the script from the command line or from other scripts, e.g.:
+#	/etc/wlink_heal.sh --check
+#	/etc/wlink_heal.sh --next
+#	/etc/wlink_heal.sh --default
+#	/etc/wlink_heal.sh --checkfix
+#
 # Reference:
 # - http://wiki.openwrt.org/doc/howto/notuci.config
 #
