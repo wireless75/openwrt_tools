@@ -107,12 +107,14 @@ CURRENT=$(ls -lrta $WCFG_PATH | grep lrwxrwxrwx | awk -F " -> " '{print $2}' | t
 if [ x"$1" = x"--default" ] ; then
 	if [ x"$CURRENT" = x"$CONF1" ] ; then
 		echo "Already set to $CONF1"
+		wifi
 		exit 0
 	fi
 	if [ -f $WCFG_PATH/$CONF1 ] ; then
 		rm -f $CONF
 		ln -s $CONF1 $CONF
 		echo "Default configuration set."
+		wifi
 		exit 0
 	fi
 	echo "Error: can not set default configuration. Missing file: $WCFG_PATH/$CONF1"
